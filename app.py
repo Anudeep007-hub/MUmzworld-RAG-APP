@@ -23,8 +23,41 @@ if uploaded:
     with st.spinner("Analyzing image..."):
         attrs = extract_attributes(image)
 
-    st.subheader("🔍 Extracted Attributes")
-    st.json(attrs.model_dump())
+    # Clean attribute display — no nulls, visually scannable
+    st.subheader("🔍 What we found in this image")
+
+    col1, col2 = st.columns(2)
+
+    attr_dict = attrs.model_dump()
+
+    # Pill-style chips for key_features
+    if attrs.key_features:
+        st.markdown("**Features detected**")
+        chips = " ".join([f"`{f}`" for f in attrs.key_features])
+        st.markdown(chips)
+
+    # Clean key-value for non-null scalar fields
+    fields = {
+        "Product Type": attr_dict.get("product_type"),
+        "Brand": attr_dict.get("brand"),
+        "Color": attr_dict.get("color"),
+        "Target Age": attr_dict.get("target_age"),
+        "Materials": attr_dict.get("materials"),
+    }
+
+    present = {k: v for k, v in fields.items() if v is not None}
+    missing = [k for k, v in fields.items() if v is None]
+
+    with col1:
+        for k, v in present.items():
+            st.markdown(f"**{k}** — {v}")
+
+    with col2:
+        conf = attrs.confidence
+        color = "green" if conf > 0.75 else "orange" if conf > 0.5 else "red"
+        st.markdown(f"**Confidence** — :{color}[{conf:.0%}]")
+        if missing:
+            st.caption(f"Could not determine: {', '.join(missing)}")
 
     if not attrs.is_baby_product:
         st.error("⚠️ This doesn't appear to be a baby/mother product. Generation refused.")
