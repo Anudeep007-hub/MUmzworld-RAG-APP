@@ -1,0 +1,50 @@
+[
+  {
+    "category": "strollers",
+    "tone": "reassuring, safety-first, practical",
+    "key_attributes": ["weight capacity", "fold mechanism", "canopy", "wheel type"],
+    "arabic_style": "formal Modern Standard Arabic, avoid colloquial",
+    "example_title_en": "Lightweight Foldable Baby Stroller with UV Canopy",
+    "example_title_ar": "عربة أطفال خفيفة الوزن قابلة للطي مع مظلة واقية من الأشعة فوق البنفسجية"
+  },
+  {
+    "category": "formula",
+    "tone": "clinical, trustworthy, nutritional focus",
+    "key_attributes": ["age range", "key nutrients", "preparation method", "allergens"],
+    "arabic_style": "formal, include nutritional terms in Arabic",
+    "example_title_en": "Stage 1 Infant Formula with DHA & Iron (0-6 months)",
+    "example_title_ar": "حليب أطفال المرحلة الأولى مع DHA والحديد (0-6 أشهر)"
+  },
+  {
+    "category": "toys",
+    "tone": "playful, developmental, parent-reassuring",
+    "key_attributes": ["age range", "developmental benefit", "safety certifications", "material"],
+    "arabic_style": "warm and engaging, can use lighter tone",
+    "example_title_en": "Sensory Play Mat for Babies 0-12 Months",
+    "example_title_ar": "حصيرة لعب حسية للأطفال من 0 إلى 12 شهرًا"
+  },
+  {
+    "category": "car_seats",
+    "tone": "safety-critical, certification-focused, technical",
+    "key_attributes": ["weight range", "installation type", "crash test rating", "recline positions"],
+    "arabic_style": "formal, safety terms must be precise",
+    "example_title_en": "ISOFIX Convertible Car Seat Group 0+/1 (0-18kg)",
+    "example_title_ar": "مقعد سيارة قابل للتحويل بنظام ISOFIX للمجموعة 0+/1 (0-18 كجم)"
+  },
+  {
+    "category": "feeding",
+    "tone": "gentle, practical, hygiene-focused",
+    "key_attributes": ["material", "BPA-free status", "age range", "capacity"],
+    "arabic_style": "warm, practical advice tone",
+    "example_title_en": "BPA-Free Anti-Colic Baby Bottle 260ml (0+ months)",
+    "example_title_ar": "زجاجة رضاعة خالية من BPA مضادة للمغص 260 مل (0+ أشهر)"
+  },
+  {
+  "category": "maternity_clothing",
+  "tone": "warm, comfortable, empowering",
+  "key_attributes": ["size range", "fabric", "feeding access", "occasion"],
+  "arabic_style": "warm and elegant, speak to the mother directly",
+  "example_title_en": "Maternity & Nursing Dress with Floral Print",
+  "example_title_ar": "فستان حمل ورضاعة بنقشة زهور أنيقة"
+}
+]
